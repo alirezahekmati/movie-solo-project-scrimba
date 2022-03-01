@@ -1,0 +1,288 @@
+
+/* pre style on some elements */
+
+*{
+    box-sizing: border-box;
+    /* overflow: hidden;  */
+    margin: 0;
+    /* border: 1px solid #1dd1a1; */
+    
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+   
+}
+
+img, picture, video, canvas, svg {
+	/*display: inline-block;    maybe this is better ?*/
+    display: block;
+    max-width: 100%;
+   
+}
+input {
+	/*width: 100%;*/
+    text-align: inherit;
+    /*margin-bottom: .75em;*/
+    /*padding: .25em;*/
+    border: 1px solid #404040;
+    border-radius: 5px;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+	transform: scale(1.05);
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 700;
+}
+a:hover,a:focus{
+  color: blue;
+}
+a:active{
+  color: green;
+}
+
+ /*scroll bar*/
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background:#95a5a6;
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #34495e;
+  border: 0.05em solid #95a5a6;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2c3e50;
+}
+button{
+    padding: .4em 1em;
+    border-radius: 2px;
+    margin: .2em;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    
+    background-color: lightblue;
+    /*kevin plus*/
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+
+button:hover,
+button:focus{
+    transform: scale(1.05);
+}
+/*utility classes  */
+.curent-page{
+	border-bottom: 1px solid grey;
+	color: red;
+}
+.last-element{
+  margin-bottom: 0;
+}
+.btn { 
+    padding: .4em 1em;
+    border-radius: 2px;
+    margin: .2em;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    
+    background-color: lightblue;
+    /*kevin plus*/
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+.btn:hover,
+.btn:focus{
+	transform: scale(1.05);
+}
+.container{
+    width: 90%;
+    margin:auto;
+    max-width: 76em;   
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.hero{
+	width: 100%;
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+/*use this side of each elemnt that should look deffrent in mobile*/
+@media (min-width:24em){
+	html, body {
+    font-size: 1.3rem;
+}
+    
+} 
+/*start of project css*/
+html, body {
+    height: 100%;
+    font-size: .9rem;
+}
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-color: #1c1c1c;
+    /* color: rgba(0,0,0,.5); */
+    color: rgba(256,256,256,.8);
+    
+}
+.container-up{
+    background: rgba(35, 37, 38, 0.950);  
+background: -webkit-linear-gradient(to right, #414345, #232526);  
+
+
+    background-image: url(andre-tan-THJJRUhNlEc-unsplash.jpg); 
+    background-blend-mode: multiply;
+    height: 50vh;
+    background-position:0px -300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.container-up h1{
+    background-color: #1b1d1e00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+.container-up h3{
+    
+    background-color: #1b1d1e00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+}
+.search{
+    
+    /* border: 1px solid wheat; */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.search input {
+    width: 80%;
+    padding: 1em;
+    
+    border-top-left-radius:15px ;
+    border-bottom-left-radius:15px ;
+    background-color: #2f2f2f;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+.search button{
+    padding: 1.5em;
+    width: 20%;
+    border-top-right-radius:15px ;
+    border-bottom-right-radius:15px ;
+    background-color: #4b4b4b;
+    color: white;
+    border: 0;
+}
+.container-down{
+    padding: 1em;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container-down-movie{
+    padding: 1em;
+    display: flex;
+    width: 90%;
+    max-width: 60rem;
+    align-items: center;
+}
+.container-down-movie-left-up{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 1em;
+}
+.container-down-movie-left-middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container-down-movie-left-down{
+    padding: 1em;
+
+}
+.container-up-watchlist-btn{
+    cursor: pointer;
+    margin: 0;
+    align-self: center;
+    transition: transform 200ms;
+}
+.container-up-watchlist-btn:hover,
+.container-up-watchlist-btn:focus{
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+.explore{
+    font-size: 3rem;
+    
+}
