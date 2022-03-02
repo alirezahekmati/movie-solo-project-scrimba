@@ -101,6 +101,7 @@ button{
     letter-spacing: 1px;
     transition: transform 250ms;
     transform: scale(1);
+    border: 0;
 }
 
 button:hover,
@@ -137,7 +138,7 @@ button:focus{
 	transform: scale(1.05);
 }
 .container{
-    width: 90%;
+    width: 982px;
     margin:auto;
     max-width: 76em;   
     background: #121212;
@@ -181,6 +182,8 @@ background: -webkit-linear-gradient(to right, #414345, #232526);
 
     background-image: url(andre-tan-THJJRUhNlEc-unsplash.jpg); 
     background-blend-mode: multiply;
+    
+    width:984px;
     height: 50vh;
     background-position:0px -300px;
     background-size: cover;
@@ -215,7 +218,7 @@ background: -webkit-linear-gradient(to right, #414345, #232526);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 900px;
     margin: 0 auto;
     margin-top: -20px;
     margin-bottom: -20px;
@@ -244,17 +247,25 @@ background: -webkit-linear-gradient(to right, #414345, #232526);
     padding: 1em;
     min-height: 40vh;
     display: flex;
+    width: 900px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
 }
 .container-down-movie{
+    
     padding: 1em;
     display: flex;
     width: 90%;
     max-width: 60rem;
     align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 1em 0;
+}
+.container-down-movie button{
+    border: 0;
 }
 .container-down-movie-left-up{
     display: flex;
