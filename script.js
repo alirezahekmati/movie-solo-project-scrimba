@@ -74,7 +74,7 @@ let genre = data.Genre
             </div>
         </div>
     </div>`
-    moviePageNumber++
+    
 }
 else  
 {
@@ -130,7 +130,7 @@ function watchlistFunc(){
 watchlist.addEventListener("click",watchlistFunc)
 function addWatchlist(event){
     //pass data  new  data added going to save it 
-
+    moviePageNumber++
     movieWatchlistArray.unshift(document.querySelector(`.movie--${moviePageNumber-1}`).outerHTML)
     localStorage.setItem("key",JSON.stringify(movieWatchlistArray))
     
@@ -141,6 +141,7 @@ function addWatchlist(event){
     searchInput = document.querySelector(".search input")
     watchlist  = document.querySelector(".container-up-watchlist-btn")
     watchlistBtn =document.querySelector(".watch-list-btn")
+    
 }
 function removeFromList(event){
     let arry
